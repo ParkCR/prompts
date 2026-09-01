@@ -14,49 +14,30 @@
            CSS VARIABLES — 朱砂红 · 文献感主题
            ============================================================ */
         :root {
-            /* 主色 · 朱砂红 (Vermilion) */
             --color-primary: oklch(0.50 0.16 25);
             --color-primary-light: oklch(0.65 0.14 25);
             --color-primary-dark: oklch(0.40 0.14 25);
             --color-primary-bg: oklch(0.94 0.04 25 / 0.25);
             --color-primary-ring: oklch(0.50 0.16 25 / 0.35);
-
-            /* 背景 · 宣纸 / 米白 */
             --color-bg: oklch(0.97 0.008 85);
             --color-card: oklch(0.995 0.004 85);
             --color-card-hover: oklch(1 0 0);
-
-            /* 文本 · 墨色 */
             --color-text: oklch(0.15 0.01 0);
             --color-text-secondary: oklch(0.38 0.008 0);
             --color-text-muted: oklch(0.58 0.008 0);
-
-            /* 边框 · 淡墨 */
             --color-border: oklch(0.88 0.008 85);
             --color-border-light: oklch(0.93 0.006 85);
-
-            /* 阴影 · 温润 */
-            --shadow-sm: 0 1px 2px oklch(0 0 0 / 0.04), 0 1px 4px oklch(0 0 0 / 0.02);
             --shadow: 0 2px 12px oklch(0 0 0 / 0.05), 0 1px 4px oklch(0 0 0 / 0.03);
             --shadow-hover: 0 8px 28px oklch(0 0 0 / 0.07), 0 2px 8px oklch(0 0 0 / 0.04);
             --shadow-modal: 0 24px 64px oklch(0 0 0 / 0.18);
-
-            /* 圆角 */
             --radius: 12px;
             --radius-sm: 6px;
-
-            /* 字体 */
             --font-serif: 'Noto Serif SC', 'Source Han Serif SC', '思源宋体', serif;
             --font-sans: 'PingFang SC', 'HarmonyOS Sans SC', 'Microsoft YaHei', system-ui, -apple-system, sans-serif;
             --font-mono: 'Geist Mono', 'Sarasa Mono SC', 'Sarasa Mono', 'JetBrains Mono', monospace;
-
-            /* 过渡 */
             --transition: 0.2s ease;
         }
 
-        /* ============================================================
-           RESET & BASE
-           ============================================================ */
         * {
             margin: 0;
             padding: 0;
@@ -97,7 +78,6 @@
             position: relative;
         }
 
-        /* 装饰线 — 文献感 */
         .app-header::after {
             content: '';
             position: absolute;
@@ -164,7 +144,7 @@
         }
 
         /* ============================================================
-           SEARCH — 下划线风格 · 文献索引感
+           SEARCH
            ============================================================ */
         .search-wrap {
             display: flex;
@@ -232,7 +212,7 @@
         }
 
         /* ============================================================
-           FILTERS — 索引标签风格
+           FILTERS
            ============================================================ */
         .filters-section {
             background: var(--color-card);
@@ -411,7 +391,7 @@
         }
 
         /* ============================================================
-           PROMPT GRID — 文献卡片
+           PROMPT GRID
            ============================================================ */
         .prompt-grid {
             display: grid;
@@ -444,13 +424,13 @@
             transform: scale(0.98);
         }
 
-        /* ★★★★★ 优化后的内侧装饰条 ★★★★★ */
+        /* ★ 内侧装饰条 — 更靠左 (left: 8px) ★ */
         .prompt-card::before {
             content: '';
             position: absolute;
-            left: 18px;     /* 向内缩进，与内边距对齐 */
+            left: 8px;
             top: 18px;
-            bottom: 18px;   /* 用 top + bottom 撑起高度，不设固定 height */
+            bottom: 18px;
             width: 3px;
             background: var(--color-primary);
             border-radius: 3px;
@@ -567,7 +547,7 @@
         }
 
         /* ============================================================
-           MODAL — 文献详情
+           MODAL
            ============================================================ */
         .modal-overlay {
             position: fixed;
@@ -860,10 +840,9 @@
                 padding: 14px 16px;
                 max-height: 220px;
             }
-            
-            /* 小屏幕内侧装饰条微调 */
+
             .prompt-card::before {
-                left: 14px;
+                left: 6px;
                 top: 14px;
                 bottom: 14px;
             }
@@ -917,9 +896,9 @@
             .results-meta {
                 font-size: 12.5px;
             }
-            
+
             .prompt-card::before {
-                left: 12px;
+                left: 4px;
                 top: 12px;
                 bottom: 12px;
                 width: 2.5px;
