@@ -38,6 +38,9 @@
             --transition: 0.2s ease;
         }
 
+        /* ============================================================
+           RESET & BASE
+           ============================================================ */
         * {
             margin: 0;
             padding: 0;
@@ -424,24 +427,7 @@
             transform: scale(0.98);
         }
 
-        /* ★ 内侧装饰条 — 更靠左 (left: 8px) ★ */
-        .prompt-card::before {
-            content: '';
-            position: absolute;
-            left: 8px;
-            top: 18px;
-            bottom: 18px;
-            width: 3px;
-            background: var(--color-primary);
-            border-radius: 3px;
-            opacity: 0;
-            transition: opacity var(--transition);
-        }
-
-        .prompt-card:hover::before {
-            opacity: 0.4;
-        }
-
+        /* 卡片顶部 */
         .prompt-card .card-top {
             display: flex;
             justify-content: space-between;
@@ -840,12 +826,6 @@
                 padding: 14px 16px;
                 max-height: 220px;
             }
-
-            .prompt-card::before {
-                left: 6px;
-                top: 14px;
-                bottom: 14px;
-            }
         }
 
         @media (max-width: 480px) {
@@ -895,13 +875,6 @@
 
             .results-meta {
                 font-size: 12.5px;
-            }
-
-            .prompt-card::before {
-                left: 4px;
-                top: 12px;
-                bottom: 12px;
-                width: 2.5px;
             }
         }
 
